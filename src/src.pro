@@ -76,12 +76,12 @@ CONFIG += link_pkgconfig
 #PKGCONFIG += openssl
 
 #INSTALL_ROOT=/usr/local/vnceglfs
-INSTALL_ROOT=${./pwd}
+#INSTALL_ROOT=${./pwd}
 # INSTALL_ROOT=$$[QT_INSTALL_PREFIX]
 
-target.path = $${INSTALL_ROOT}/lib
+#target.path = $${INSTALL_ROOT}/lib
 
 header_files.files = VncNamespace.h
-header_files.path = $${INSTALL_ROOT}/include
+#header_files.path = $${INSTALL_ROOT}/include
 
 INSTALLS += target header_files
