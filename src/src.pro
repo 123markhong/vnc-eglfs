@@ -51,7 +51,7 @@ noqtheaderwarnings {
 MOC_DIR=moc
 OBJECTS_DIR=obj
 
-TARGET = $$qtLibraryTarget(vncgl)
+#TARGET = $$qtLibraryTarget(vncgl)
 DESTDIR = lib
 
 HEADERS += \
@@ -73,7 +73,7 @@ SOURCES += \
     VncNamespace.cpp
 
 CONFIG += link_pkgconfig
-PKGCONFIG += openssl
+#PKGCONFIG += openssl
 
 INSTALL_ROOT=/usr/local/vnceglfs
 # INSTALL_ROOT=$$[QT_INSTALL_PREFIX]
