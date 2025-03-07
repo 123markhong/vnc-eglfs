@@ -53,6 +53,8 @@ OBJECTS_DIR=obj
 
 #TARGET = $$qtLibraryTarget(vncgl)
 DESTDIR = lib
+#LIBS *= -L$${BUILD_ROOT}/lib -l$$qtLibraryTarget(qvnc)
+#LIBS += -L/opt/st/myd-ld25x/4.2.4-snapshot/sysroots/cortexa35-ostl-linux/usr/lib/plugins/platforms -lqvnc
 
 HEADERS += \
     RfbSocket.h \
@@ -70,11 +72,12 @@ SOURCES += \
     RfbInputEventHandler.cpp \
     VncServer.cpp \
     VncClient.cpp \
-    VncNamespace.cpp
+    VncNamespace.cpp \
+    VncProxyPlugin.cpp
 
 CONFIG += link_pkgconfig
 #PKGCONFIG += openssl
-
+OTHER_FILES += metadata.json
 #INSTALL_ROOT=/usr/local/vnceglfs
 #INSTALL_ROOT=${./pwd}
 # INSTALL_ROOT=$$[QT_INSTALL_PREFIX]
